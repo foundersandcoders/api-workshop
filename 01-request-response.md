@@ -16,12 +16,12 @@ An API request is an object, and you create one by calling the XMLHttpRequest co
 Let's create a request object in the console so we can take a closer look at it:  
 1. Open a new browser window  
 2. Open the developer console (mac: `CMD+shift+I`, linux: `ctrl+shift+I`)  
-3. Type `var xhr = new XMLHttpRequest();` in the console
+3. Type `var xhr = new XMLHttpRequest();` in the console  
 4. Then type `xhr` and hit enter  
 5. Click on the grey arrow next to your xhr object so you can take a look at its methods and properties  
 6. Two things to take note of:    
-    i. The property 'responseText' has an empty string as its value. More on this in a moment.    
-    ii. Click on the arrow next to \__proto__: XMLHttpRequest and take a look at all those methods. You'll be using a few of them, including 'open' and 'send', shortly.
+    - The property 'responseText' has an empty string as its value. More on this in a moment.    
+    - Click on the arrow next to \__proto__: XMLHttpRequest and take a look at all those methods. You'll be using a few of them, including 'open' and 'send', shortly.
 
 
 ### The response object
@@ -48,7 +48,9 @@ The Hypertext Transfer Protocol (HTTP) is the mechanism through which data is re
 When sending an API request, we use a URL to identify the server (kind of like the address on an envelope) and the rest of the url specifies what it is we want the server to send back. These are called parameters or queries.
 
 
-<div style="width:400px;">![parts of a url](https://natashastokesict.files.wordpress.com/2012/10/picture21.png)</div>
+<div style="width:400px;">
+<img src="https://natashastokesict.files.wordpress.com/2012/10/picture21.png" alt="parts of a url image"/>
+</div>
 
 ### Summary
 When you make an api request you write code that sends a request object to a server via HTTP. The response you get back is a mash of text and you use the 'JSON.parse()' method to transform your response into an object you can use.
