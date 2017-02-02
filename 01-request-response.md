@@ -48,7 +48,7 @@ The Hypertext Transfer Protocol (HTTP) is the mechanism through which data is re
 When sending an API request, we use a URL to identify the server (kind of like the address on an envelope) and the rest of the url specifies what it is we want the server to send back. These are called parameters or queries.
 
 
-<img style="width:300px;" src="https://natashastokesict.files.wordpress.com/2012/10/picture21.png" alt="parts of a url image"/>
+<img style="width:400px;" src="./url.png" alt="parts of a url image"/>
 
 ### Summary
 When you make an api request you write code that sends a request object to a server via HTTP. The response you get back is a mash of text and you use the 'JSON.parse()' method to transform your response into an object you can use.
