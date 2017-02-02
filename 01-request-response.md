@@ -13,14 +13,14 @@ An API request does the same kind of thing. It opens a connection between a clie
 An API request is an object, and you create one by calling the XMLHttpRequest constructor.  
 
 Let's create a request object in the console so we can a a closer look at it:  
-1. Open a browser window
+1. Open a browser window  
 2. Open the developer console (Mac: `CMD + shift + I`, Linux: `ctrl + shift + I`)
 3. Type in `var xhr = new XMLHttpRequest();`
 4. Type in `xhr`;
 5. Click on the arrows so you can take a look at the properties inherited by your xhr object
 6. Two things to take note of:  
   i. The property 'responseText' has an empty string as its value. More on this in a moment.  
-  ii. Click on the arrow next to __proto__: XMLHttpRequest and take a look at all the methods that are built into this object, such as 'open' and 'send'. You don't need to understand these yet, just notice that they're there.
+  ii. Click on the arrow next to \__proto__: XMLHttpRequest and take a look at all the methods that are built into this object, such as 'open' and 'send'. You don't need to understand these yet, just notice that they're there.
 
 
 ### The response object
