@@ -19,12 +19,12 @@ Let's create a request object in the console so we can a a closer look at it:
 4. Type in `xhr`;  
 5. Click on the arrows so you can take a look at the properties inherited by your xhr object  
 6. Two things to take note of:    
-  i. The property 'responseText' has an empty string as its value. More on this in a moment.    
-  ii. Click on the arrow next to \__proto__: XMLHttpRequest and take a look at all the methods that are built into this object, such as 'open' and 'send'. You don't need to understand these yet, just notice that they're there.
+    i. The property 'responseText' has an empty string as its value. More on this in a moment.    
+    ii. Click on the arrow next to \__proto__: XMLHttpRequest and take a look at all the methods that are built into this object, such as 'open' and 'send'. You don't need to understand these yet, just notice that they're there.
 
 
 ### The response object
-When you examined the request object we saw that it has a property called 'responseText', and its value is an empty string. The reason it's an empty string is that we don't have a response yet. When the server sends back the responseText, it appends it as a value to the responseText property, and what comes back is great bit mash of text. In order to transform this into an object that we can use, we 'parse' it, using the JavaScript Object Notation (JSON) method `JSON.parse()`. Once the responseText been parsed, you can access like you would any other JavaScript object.
+When we examined the request object we saw that it has a property called 'responseText', and its value is an empty string. The reason it's an empty string is that we don't have a response yet. The server sends back the responseText by assigning it as a value to the responseText property. What comes back is great big mash of text. In order to transform this into an object that we can use, we 'parse' it, using JavaScript Object Notation (JSON), which has a method `JSON.parse()` that will do this for you. Once the responseText been parsed, you can access like you would any other JavaScript object.
 
 **Examining the response object**  
 Open the following api call in a browser window:   
