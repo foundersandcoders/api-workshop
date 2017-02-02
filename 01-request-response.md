@@ -34,5 +34,13 @@ http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC
 2. Take a look at the data that's displayed in your browser. This is what a response object looks like. Click on some of the links and see what happens.  
 3. Take a look at the api url. You don't need to understand it right away but it's worth having a look at it to see the relationship between the url and what's in the response object.
 
+### HTTP
+The Hypertext Transfer Protocol (HTTP) is the mechanism through which data is requested and provided on the World Wide Web.
+
+When sending an API request, we use a URL to identify the server (kind of like the address on an envelope) and the rest of the url specifies what it is we want the server to send back. These are called parameters or queries.
+
+
+<div style="width:400px;">![parts of a url](https://natashastokesict.files.wordpress.com/2012/10/picture21.png)</div>
+
 ### Summary
 When you make an api request you write code that sends a request object to a server via HTTP. The response you get back is a mash of text and you use the 'JSON.parse()' method to transform your response into an object you can use.
