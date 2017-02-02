@@ -13,26 +13,34 @@ An API request also opens a connection between a client (your code running in th
 ### The request object
 An API request is an object, and you create one by calling the XMLHttpRequest constructor.  
 
-Let's create a request object in the console so we can a a closer look at it:  
-1. Open a browser window  
-2. Open the developer console (Mac: `CMD + shift + I`, Linux: `ctrl + shift + I`)  
-3. Type in `var xhr = new XMLHttpRequest();`  
-4. Type in `xhr`;  
-5. Click on the arrows so you can take a look at the properties inherited by your xhr object  
+Let's create a request object in the console so we can take a closer look at it:  
+1. Open a new browser window  
+2. Open the developer console (mac: `CMD+shift+I`, linux: `ctrl+shift+I`)  
+3. Type `var xhr = new XMLHttpRequest();` in the console
+4. Then type `xhr` and hit enter  
+5. Click on the grey arrow next to your xhr object so you can take a look at its methods and properties  
 6. Two things to take note of:    
     i. The property 'responseText' has an empty string as its value. More on this in a moment.    
-    ii. Click on the arrow next to \__proto__: XMLHttpRequest and take a look at all the methods that are built into this object, such as 'open' and 'send'. You don't need to understand these yet, just notice that they're there.
+    ii. Click on the arrow next to \__proto__: XMLHttpRequest and take a look at all those methods. You'll be using a few of them, including 'open' and 'send', shortly.
 
 
 ### The response object
-When we examined the request object we saw that it has a property called 'responseText', and its value is an empty string. The reason it's an empty string is that we don't have a response yet. The server sends back the responseText by assigning it as a value to the responseText property. What comes back is great big mash of text. In order to transform this into an object that we can use, we 'parse' it, using JavaScript Object Notation (JSON), which has a method `JSON.parse()` that will do this for you. Once the responseText been parsed, you can access like you would any other JavaScript object.
+When we examined the request object we saw that it has a property called 'responseText', and its value is an empty string. The reason it's an empty string is that we don't have a response yet.  
 
-Let's take a look at a response object:
+When you make a successful request, the server sends back the response by assigning it as a value to the responseText property in your request. What comes back is great big mash of text.  
 
-1. Open the link below in a new browser window. The url will make an api request to api.giphy.com. You will see the parsed response object in the browser window:   
+In order to transform `xhr.responseText` into an object that we can use, we 'parse' it, using JavaScript Object Notation (JSON), which has a method `JSON.parse()` that will do this bit of magic for you.
+
+`var data = JSON.parse(xhr.responseText);`
+
+Once the responseText been parsed, you can access it like you would any other JavaScript object. I've called my parsed object 'data'. I could then `console.log(data);` to get a look at my parsed object.
+
+Let's take a look at an example of a response object:
+
+1. Open the link below in a new browser window. The url will make an api request to api.giphy.com. You'll see the parsed response object in the browser window:   
 http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC  
 2. Take a look at the data that's displayed in your browser. This is what a response object looks like. Click on some of the links and see what happens.  
-3. Take a look at the api url. You don't need to understand it right away but it's worth having a look at it to see the relationship between the url and what's in the response object.
+3. Take a look at the api url. You don't need to understand it all right away but it's worth having a look at it to see the relationship between the url and what's in the response object.
 
 ### HTTP
 The Hypertext Transfer Protocol (HTTP) is the mechanism through which data is requested and provided on the World Wide Web.
