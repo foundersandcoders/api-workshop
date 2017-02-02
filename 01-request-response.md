@@ -48,7 +48,7 @@ The Hypertext Transfer Protocol (HTTP) is the mechanism through which data is re
 When sending an API request, we use a URL to identify the server (kind of like the address on an envelope) and the rest of the url specifies what it is we want the server to send back. These are called parameters or queries.
 
 
-<div style="width:400px;">
+<div style="width:250px;">
 <img src="https://natashastokesict.files.wordpress.com/2012/10/picture21.png" alt="parts of a url image"/>
 </div>
 
