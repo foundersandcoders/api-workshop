@@ -1,13 +1,14 @@
-## The request-reponse pattern
+## Request and response
 
 ### The pattern
-The request-response pattern is central to making API requests. Luckily it's pretty simple to grasp.
-
-A familiar example of request and reponse is when you open your browser, type in a url and hit enter. What you're doing is opening a connection between your browser and some domain. The server at that address processes your request and replies with any data (files, images etc) associated with the address you specified.  
-
-An API request does the same kind of thing. It opens a connection between a client (your code running in the browser) and a server, and makes a request. It even uses an HTTP url, just like you use in your browser address bar. The server responds with data, which might be information about the weather, pictures of cats or links to news articles.
+Request/response is a pattern that's central to making API requests. Luckily it's fairly simple to grasp.
 
 ![client-server-image](https://developer.mozilla.org/files/4291/client-server.png)  
+
+A familiar example of request and reponse is when you open your browser, type in a url and hit enter. What you're doing is opening a connection between your browser (the client) and some domain (the server). The server at that address processes your request and replies with any data (files, images etc) associated with the address you specified in your request. You will learn how to construct requests shortly.  
+
+An API request also opens a connection between a client (your code running in the browser) and a server, and makes a request. It even uses an HTTP url, just like you use in your browser address bar. The server responds with data, which might be information about the weather, pictures of cats or links to news articles.
+
 
 ### The request object
 An API request is an object, and you create one by calling the XMLHttpRequest constructor.  
@@ -26,12 +27,12 @@ Let's create a request object in the console so we can a a closer look at it:
 ### The response object
 When we examined the request object we saw that it has a property called 'responseText', and its value is an empty string. The reason it's an empty string is that we don't have a response yet. The server sends back the responseText by assigning it as a value to the responseText property. What comes back is great big mash of text. In order to transform this into an object that we can use, we 'parse' it, using JavaScript Object Notation (JSON), which has a method `JSON.parse()` that will do this for you. Once the responseText been parsed, you can access like you would any other JavaScript object.
 
-**Examining the response object**  
-Open the following api call in a browser window:   
-http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC  
-This is an api url, which is using HTTP to connect with api.giphy.com and requesting whatever is at '/v1/gifs/search', which is followed by a query and an api key.
+Let's take a look at a response object:
 
-Take a look at the data that's displayed in your browser. This is what a response object looks like.
+1. Open the link below in a new browser window. The url will make an api request to api.giphy.com. You will see the parsed response object in the browser window:   
+http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC  
+2. Take a look at the data that's displayed in your browser. This is what a response object looks like. Click on some of the links and see what happens.  
+3. Take a look at the api url. You don't need to understand it right away but it's worth having a look at it to see the relationship between the url and what's in the response object.
 
 ### Summary
 When you make an api request you write code that sends a request object to a server via HTTP. The response you get back is a mash of text and you use the 'JSON.parse()' method to transform your response into an object you can use.
