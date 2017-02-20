@@ -4,7 +4,7 @@ There are a few core concepts you need to understand in making API requests. By 
 - What is the request-response pattern and how does this relate to API requests?
 - What is http?
 - What is an xhr?
-- What does 'aynchronous' mean?
+- What does 'asynchronous' mean?
 
 
 ### Preparation
