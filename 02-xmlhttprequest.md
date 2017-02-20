@@ -10,9 +10,9 @@ When the XMLHttpRequest interface was added to Internet Explorer, it allowed peo
 
 The other significant browser at that time, Mozilla (later Firefox), did not want to be left behind. To allow people to do similarly neat things in its browser, Mozilla copied the interface, including the bogus name. The next generation of browsers followed this example, and today XMLHttpRequest is a de facto standard interface.  
 
-It's important that you know that an XMLHttpRequest (XHR) is actually an object that can be accessed by creatin instance of it like this `var xhr = new XMLHttpRequest()`. It has a whole lot of methods available to it in order to interact in different ways with a server.
+It's important that you know that an XMLHttpRequest (XHR) is an object. You can create an instance of XHR using an object constructor as follows `var xhr = new XMLHttpRequest()`. Its prototype has a whole lot of methods that assist you to interact with a server.
 
-Here is a simple example of how you can make an XML request:  
+Here is an example of an XHR and some code to handle the response when it comes back (assuming it is successful):  
 
 ~~~
 var myRequest = new XMLHttpRequest();
