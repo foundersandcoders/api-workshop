@@ -16,11 +16,11 @@ If you're interested in reading more, [this is](http://stackoverflow.com/questio
 
 From the same StackOverflow post:
 ```
-Single-threaded synchronous  
+Single-threaded synchronous runtime  
 
 1 thread ->   |<---A---->||<----B---------->||<------C----->|
 
-Single-threaded asynchronous code  
+Single-threaded asynchronous runtime  
 
         A-Start -------------------------------------------- A-End   
           | B-Start -------------------------------------------|--- B-End   
