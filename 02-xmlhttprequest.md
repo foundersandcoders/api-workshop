@@ -32,7 +32,7 @@ myRequest.send();
 Following is an explanation of each line of code from the block above.
 
 1. `var myRequest = new XMLHttpRequest();` --- this creates a new instance of the XHR object, which you can then use to query a server or file of your choice.  
-2. `myRequest.onreadystatechange = function() {...}` --- this method of the XHR object enables you to store a function (after the '=') which will be called automatically each time the readyState property of the myRequest object changes. More here.
+2. `myRequest.onreadystatechange = function() {...}` --- this method of the XHR object enables you to store a function (after the '=') which will be called automatically each time the readyState property of the myRequest object changes. [Read more about `onreadystatechange` here](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange).
 3. `if(myRequest.readyState == 4 && myRequest.status == 200){...}` --- every time the readyState property changes, the function will check if these two functions are met:  
   i. `myRequest.readyState == 4` --- the readyState property changes from 0 to 4 as the request is processed. 0 means the request is not initialised, while 4 means the request is finished and the response is ready. However, the response might be that the request hasn't found what it was meant to, which is why we also need:  
   ii. `myRequest.status = 200` --- this property is only valid after the send method returns successfully. It will return a 3-digit status code starting with 1, 2, 3, 4, or 5, indicating what the result of your request was. The code 200 means 'OK', while 404 is notoriously the code for 'Not found'. Full list here, under 'Return Values'.
