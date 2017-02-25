@@ -31,7 +31,7 @@ After that we will work on some examples in which we will make API requests.
 
 5. Example two: [write an XHR from scratch](https://github.com/skibinska/xhr-workshop)
     - Click on the link and clone the repo to your local machine
-    - Write the XHR and see if you can get the request working!
+    - Follow the instructions in the readme
 
 ### Follow up and further learning
 - If you're at all hazy about how the internet works, watch [this excellent explanation]( https://www.youtube.com/watch?v=7_LPdttKXPc)
