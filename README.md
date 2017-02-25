@@ -14,16 +14,16 @@ For each topic we will give you 15-20 minutes of reading and discussion time in 
 After that we will work on some examples in which we will make API requests.
 
 #### What to do
-1. Read about the [request and response pattern](https://github.com/lucymonie/api-workshop/blob/master/01-request-response.md)
+1. Read about the [request and response pattern](https://github.com/lucymonie/api-workshop/blob/master/01-request-response.md)  
     And be ready to answer questions
 
-2. Read about the [XMLHttpRequests](https://github.com/lucymonie/api-workshop/blob/master/02-xmlhttprequest.md)
+2. Read about the [XMLHttpRequests](https://github.com/lucymonie/api-workshop/blob/master/02-xmlhttprequest.md)  
     And be ready to answer questions
 
-3. Read about the [asynchronous code](https://github.com/lucymonie/api-workshop/blob/master/03-asynchonous.md)
+3. Read about the [asynchronous code](https://github.com/lucymonie/api-workshop/blob/master/03-asynchonous.md)  
     And be ready to answer questions
 
-4. Example one: [fix a broken API request](https://github.com/lucymonie/api-workshop/tree/master/api-example)
+4. Example one: [fix a broken API request](https://github.com/lucymonie/api-workshop/tree/master/api-example)  
     - You will need to clone the repository and work on the code locally
     - Go to your terminal and enter:`git clone git@github.com:lucymonie/api-workshop.git`
     - Open index.html in the browser and you will see that the API request is not working
