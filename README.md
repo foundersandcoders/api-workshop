@@ -14,10 +14,11 @@ For each topic we will give you 10-15 minutes of reading and discussion time in 
 After that we will work on some examples in which we will make API requests.
 
 #### What to do
-Read each section and be ready to answer questions
+Read each section and be ready to answer questions  
+
 1. [Request and response pattern](https://github.com/lucymonie/api-workshop/blob/master/01-request-response.md)  
 
-2. [HTTP](https://github.com/lucymonie/api-workshop/blob/master/02-http.md)
+2. [HTTP](https://github.com/lucymonie/api-workshop/blob/master/02-http.md)  
 
 3. [XMLHttpRequests](https://github.com/lucymonie/api-workshop/blob/master/02-xmlhttprequest.md)  
 
