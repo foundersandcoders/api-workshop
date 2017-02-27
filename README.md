@@ -20,9 +20,9 @@ Read each section and be ready to answer questions
 
 2. [HTTP](https://github.com/lucymonie/api-workshop/blob/master/02-http.md)  
 
-3. [XMLHttpRequests](https://github.com/lucymonie/api-workshop/blob/master/02-xmlhttprequest.md)  
+3. [XMLHttpRequests](https://github.com/lucymonie/api-workshop/blob/master/03-xmlhttprequest.md)  
 
-4. [asynchronous code](https://github.com/lucymonie/api-workshop/blob/master/03-asynchonous.md)  
+4. [asynchronous code](https://github.com/lucymonie/api-workshop/blob/master/04-asynchonous.md)  
 
 5. Example one: [fix a broken API request](https://github.com/lucymonie/api-workshop/tree/master/api-example)  
     - You will need to clone the repository and work on the code locally
