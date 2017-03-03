@@ -26,7 +26,7 @@ Read each section and be ready to answer questions
 
 5. Example one: [fix a broken API request](https://github.com/lucymonie/api-workshop/tree/master/api-example)  
     - You will need to clone the repository and work on the code locally
-    - Go to your terminal and enter:`git clone git@github.com:lucymonie/api-workshop.git`
+    - Go to your terminal and enter:`git clone https://github.com/lucymonie/api-workshop.git`
     - Open index.html in the browser and you will see that the API request is not working
     - Open main.js and look for what's broken or missing in the code. If you're confused, check it line-by-line against the description of XHR in [this file](https://github.com/lucymonie/api-workshop/blob/master/03-xmlhttprequest.md)
 
