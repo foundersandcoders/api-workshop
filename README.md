@@ -28,7 +28,7 @@ Read each section and be ready to answer questions
     - You will need to clone the repository and work on the code locally
     - Go to your terminal and enter:`git clone git@github.com:lucymonie/api-workshop.git`
     - Open index.html in the browser and you will see that the API request is not working
-    - Open main.js and look for what's broken or missing in the code. If you're confused, check it line-by-line against the description of XHR in [this file](https://github.com/lucymonie/api-workshop/blob/master/02-xmlhttprequest.md)
+    - Open main.js and look for what's broken or missing in the code. If you're confused, check it line-by-line against the description of XHR in [this file](https://github.com/lucymonie/api-workshop/blob/master/03-xmlhttprequest.md)
 
 6. Example two: [write an XHR from scratch](https://github.com/skibinska/xhr-workshop)
     - Click on the link and clone the repo to your local machine
@@ -38,4 +38,3 @@ Read each section and be ready to answer questions
 - If you're at all hazy about how the internet works, watch [this excellent explanation]( https://www.youtube.com/watch?v=7_LPdttKXPc)
 - If you're interested in how domains are translated into ip addresses, watch [this amusing discussion of DNS](https://www.youtube.com/watch?v=72snZctFFtA)
 - REST (Representational State Transfer) is a best practice standard for web interactions. [This video](https://www.youtube.com/watch?v=YCcAE2SCQ6k) gives some background about REST.
-
