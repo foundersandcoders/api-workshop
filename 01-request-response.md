@@ -31,6 +31,8 @@ When you make a successful request, the server sends back the response by assign
 
 In order to transform `xhr.responseText` into an object that we can use, we 'parse' it, using JavaScript Object Notation (JSON), which has a method `JSON.parse()` that will do this bit of magic for you.
 
+In case you haven't heard of it before, JSON is a way to store information that's organised and easy to access. It looks like a JavaScript object but its keys and values are always strings.
+
 `var data = JSON.parse(xhr.responseText);`
 
 Once the responseText been parsed, you can access it like you would any other JavaScript object. I've called my parsed object 'data'. I could then `console.log(data);` to get a look at my parsed object.
