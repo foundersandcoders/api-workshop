@@ -14,6 +14,8 @@ For each topic we will give you 10-15 minutes of reading and discussion time in 
 After that we will work on some examples in which we will make API requests.
 
 #### What to do
+Start by adding [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) a Chrome extension that makes JSON data much more readable in Chrome
+
 Read each section and be ready to answer questions  
 
 1. [Request and response pattern](https://github.com/lucymonie/api-workshop/blob/master/01-request-response.md)  
