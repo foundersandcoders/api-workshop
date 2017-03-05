@@ -15,15 +15,15 @@ It's important that you know that an XMLHttpRequest (XHR) is an object. You can 
 Here is an example of an XHR and some code to handle the response when it comes back (assuming it is successful):  
 
 ~~~
-var myRequest = new XMLHttpRequest();
-myRequest.onreadystatechange = function() {
-    if (myRequest.readyState == 4 && myRequest.status == 200) {
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
       document.getElementById("demo").innerHTML =
-      myRequest.responseText;
+      xhr.responseText;
     }
 };
-myRequest.open("GET", "xmlhttp_info.txt", true);
-myRequest.send();
+xhr.open("GET", "xmlhttp_info.txt", true);
+xhr.send();
 ~~~
 
 [You can see it in action here](http://www.w3schools.com/xml/xml_http.asp).  
@@ -31,14 +31,14 @@ myRequest.send();
 ### Line by line
 Following is an explanation of each line of code from the block above.
 
-1. `var myRequest = new XMLHttpRequest();` --- this creates a new instance of the XHR object, which you can then use to query a server or file of your choice.  
-2. `myRequest.onreadystatechange = function() {...}` --- this method of the XHR object enables you to store a function (after the '=') which will be called automatically each time the readyState property of the myRequest object changes. [Read more about `onreadystatechange` here](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange).
-3. `if(myRequest.readyState == 4 && myRequest.status == 200){...}` --- every time the readyState property changes, the function will check if these two functions are met:  
-  i. `myRequest.readyState == 4` --- the readyState property changes from 0 to 4 as the request is processed. 0 means the request is not initialised, while 4 means the request is finished and the response is ready. However, the response might be that the request hasn't found what it was meant to, which is why we also need:  
-  ii. `myRequest.status = 200` --- this property is only valid after the send method returns successfully. It will return a 3-digit status code starting with 1, 2, 3, 4, or 5, indicating what the result of your request was. The code 200 means 'OK', while 404 is notoriously the code for 'Not found'.
-4. `document.getElementById("demo").innerHTML = myRequest.responseText;` --- this is the code that will run if the request is successful. It generally does something with the response text (which is accessed with myRequest.responseText)
-5. `myRequest.open("GET", "xmlhttp_info.txt", true);` --- the open method is important. Here it takes 3 parameters:  
+1. `var xhr = new XMLHttpRequest();` --- this creates a new instance of the XHR object, which you can then use to query a server or file of your choice.  
+2. `xhr.onreadystatechange = function() {...}` --- this method of the XHR object enables you to store a function (after the '=') which will be called automatically each time the readyState property of the xhr object changes. [Read more about `onreadystatechange` here](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange).
+3. `if(xhr.readyState == 4 && xhr.status == 200){...}` --- every time the readyState property changes, the function will check if these two functions are met:  
+  i. `xhr.readyState == 4` --- the readyState property changes from 0 to 4 as the request is processed. 0 means the request is not initialised, while 4 means the request is finished and the response is ready. However, the response might be that the request hasn't found what it was meant to, which is why we also need:  
+  ii. `xhr.status = 200` --- this property is only valid after the send method returns successfully. It will return a 3-digit status code starting with 1, 2, 3, 4, or 5, indicating what the result of your request was. The code 200 means 'OK', while 404 is notoriously the code for 'Not found'.
+4. `document.getElementById("demo").innerHTML = xhr.responseText;` --- this is the code that will run if the request is successful. It generally does something with the response text (which is accessed with xhr.responseText)
+5. `xhr.open("GET", "xmlhttp_info.txt", true);` --- the open method is important. Here it takes 3 parameters:  
   i. *method*: The HTTP method to use (GET, POST, PUT, DELETE etc)  
   ii. *url*: The requested URL (in this case a local file path: "xmlhttp_info.txt") - in many cases this will be the URL of the server you are querying.  
   iii. *async* (optional): whether the call should be asynchronous or not. false means it waits for a response from the server before continuing execution of the code. The default value is true, which allows you to execute other scripts while waiting for the response. This is generally preferable.
-6. `myRequest.send();` --- this method sends the request to the server. Use this after setting up the XHR with the .open() method. If you are GETting, it takes no parameter, but if you are POSTing, it may take a parameter of the string you wish to post.
+6. `xhr.send();` --- this method sends the request to the server. Use this after setting up the XHR with the .open() method. If you are GETting, it takes no parameter, but if you are POSTing, it may take a parameter of the string you wish to post.

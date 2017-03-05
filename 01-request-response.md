@@ -15,7 +15,7 @@ An API request is an object, and you create one by calling the XMLHttpRequest co
 
 Let's create a request object in the console so we can take a closer look at it:  
 1. Open a new browser window  
-2. Open the developer console (mac: `CMD+shift+I`, linux: `ctrl+shift+I`)  
+2. Open the developer console (mac: `cmd+alt+i`, linux: `ctrl+shift+i`)  
 3. Type `var xhr = new XMLHttpRequest();` in the console  
 4. Then type `xhr` and hit enter  
 5. Click on the grey arrow next to your xhr object so you can take a look at its methods and properties  
