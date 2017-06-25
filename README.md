@@ -1,3 +1,7 @@
+**Author**: [@lucymonie](https://github.com/lucymonie)  
+
+**Maintainer**: [@lucymonie](https://github.com/lucymonie)
+
 # Introducing APIs
 
 There are a few core concepts you need to understand in making API requests. By the end of this morning's workshop you should have a mental model of
