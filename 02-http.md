@@ -1,10 +1,10 @@
-## HTTP
-
-## Learning Outcomes:
+## HTTP: Learning Outcomes
 * Know the different between GET, POST, PUT and DELETE
 * Understand the anatomy of a url
 * Know what HTTP means
 * Recognise what status codes stand for
+
+## HTTP
 
 The Hypertext Transfer Protocol (HTTP) is the mechanism through which data is requested and provided on the World Wide Web.
 
@@ -71,7 +71,7 @@ All is well. If a resource was requested it will be provided.
 
 #### Codes starting with 3
 
-These indicate some kind of redirection.
+These indicate some kind of redirection. The 302 status code is a common redirect code. Redirects cannot be handled using XHR requests because the browser takes care of them automatically. You will only get back what is at the redirected location.
 
 #### Codes starting with 4
 

@@ -1,9 +1,14 @@
+## Asynchronicity: Learning Outcomes
+* Understand the difference between asynchronous and synchronous code
+* Get familiar with the event loop
+* Know examples of synchronous and asynchronous code
+
 ## Asynchronous things
 
 ### Javascript - what are you?
 If you have watched the video ['What the heck is the event loop anyway?''](https://www.youtube.com/watch?v=8aGhZQkoFbQ&t) you will be aware that Philip Roberts says Javascript is 'a single-threaded non-blocking **asynchronous** concurrent language' (my emphasis).  
 
-Javascript at its core is actually **synchronous**, which basically means that it can do one thing at a time. However, in order to perform slower tasks (eg network requests) without blocking the browser, Javascript has certain functionality (eg setTimeout and callbacks) that are automatically diverted out of the runtime to service workers, and are then added to the task queue.
+Javascript at its core is actually **synchronous**, which basically means that it can do one thing at a time. However, in order to perform slower tasks (e.g. network requests) without blocking the browser, Javascript has certain functionality (eg setTimeout and callbacks) that are automatically diverted out of the runtime to service workers, and are then added to the task queue.
 
 The event loop manages the processing of tasks in the call stack and the task queue. It pushes asynchronous stuff to the task queue, and processes the remaining items in the call stack. Once the call stack has been cleared, the event loop checks the task queue, and pushes tasks one by one onto the call stack until the task queue is cleared as well. This prevents the call stack from getting blocked by slow network requests etc.  
 

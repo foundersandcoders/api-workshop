@@ -11,7 +11,7 @@ There are a few core concepts you need to understand in making API requests. By 
 - The meaning of 'asynchronous' in the context of API requests
 
 ### The workshop
-We will be working in pairs this morning, so figure out who you will be working with. The plan is that each pair should actively read and discuss each topic and try to make sure they both understand the material. How you do this is up to you - you may like to take some time to read separately and then discuss the material between you.
+We will be working in pairs this morning, so figure out who you will be working with. The plan is that each pair should actively read and discuss each topic and try to make sure they both understand the material. How you do this is up to you - you may like to take some time to read separately and then discuss the material between you. Remember: Google is your friend.
 
 For each topic we will give you 10-15 minutes of reading and discussion time in your pairs, and then we will spend 10-15 minutes asking you questions about the material, and we will pick on pairs at random to answer the questions or explain aspects of the material. We will also attempt to answer any questions you may have for us.
 
