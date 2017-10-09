@@ -2,7 +2,7 @@
 
 ### Structure of Intro Workshop
 
-This is a 1 hour and 45 minute workshop with quite a lot of reading material to cover. As is says in the readme, students should spend about 10 minutes reading each page and it will be followed by 10-15 minutes of questions and discussion. Note that the asynchronous section would benefit from going through the Loupe link on the projector.
+This is a 1 hour and 45 minute workshop with quite a lot of reading material to cover. As it says in the readme, students should spend about 10 minutes reading each page and it will be followed by 10-15 minutes of questions and discussion. Note that the asynchronous section would benefit from going through the Loupe link on the projector.
 
 There is a range of questions listed below - mentors should choose around 3 questions to ask each time.
 
