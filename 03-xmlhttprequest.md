@@ -53,6 +53,6 @@ Following is an explanation of each line of code from the block above.
 
 AJAX stands for Asynchronous JavaScript And XML.
 
-And AJAX call is an asynchronous request initiated by the browser which does not result in the page having to reload. AJAX requests are sometimes called XHR requests because this is the name most browsers give to the object used to send an AJAX request.
+An AJAX call is an asynchronous request initiated by the browser which does not result in the page having to reload. AJAX requests are sometimes called XHR requests because this is the name most browsers give to the object used to send an AJAX request.
 
 Asynchronicity is covered in the next page!
