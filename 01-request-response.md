@@ -1,3 +1,8 @@
+## Request and response: Learning Outcomes
+* Understand what a request and a response is
+* Be familiar with what a request object and response object looks like
+* Know what JSON is used for and what it looks like
+
 ## Request and response
 
 ### The pattern

@@ -1,4 +1,11 @@
+## HTTP: Learning Outcomes
+* Know the different between GET, POST, PUT and DELETE
+* Understand the anatomy of a url
+* Know what HTTP means
+* Recognise what status codes stand for
+
 ## HTTP
+
 The Hypertext Transfer Protocol (HTTP) is the mechanism through which data is requested and provided on the World Wide Web.
 
 When sending an API request, we use a URL to identify the specific server where we want to send the request (kind of like the address on an envelope) and the rest of the url specifies what it is we want the server to send back. These are called parameters or queries.
@@ -15,21 +22,34 @@ HTTPS and FTPS are secure versions of HTTP and FTP. They use SSL (Secure Sockets
 ### HTTP methods
 #### GET
 
-This is, funnily enough, used to 'get' or retrieve resources such as HTML, JavaScript, CSS, images and so on. As a general rule, `GET` requests should not modify the resource in any way.
+* 'gets' or grabs resources such as HTML, JavaScript, CSS, images and so on.
+* `GET` requests should not modify the resource in any way.
+* Request query values are sent as part of the url (so don't use `GET` when sending sensitive information!).
+
+EXAMPLE: Looking at a particular topic on Wikipedia.
 
 #### POST
 
-The `POST` method is used to send data to the server. The resource at the path specified in the request will deal with the data. The data is sent in the body of the request with the encoding method specified in an additional header called `Content-Type` so that the server knows how to decode the information. A `Content-Length` header is also required so that the server knows when it has received all of the information (a large amount of data might be split across multiple requests).
+* Sends data to the server.
+* This data (e.g., from an HTML form) is processed to a specified path to modify or update a resource.
+* The data values are sent in the body of the request, in the format that the `Content-Type` header specifies. This way the server knows how to decode the information.
+* A `Content-Length` header is also required so that the server knows when it has received all of the information (a large amount of data might be split across multiple requests).
+* Unlike `GET`, `POST` data is not displayed in the url.
+
+EXAMPLE: Submitting a comment on a message board.
 
 #### PUT
 
-`PUT` places some provided data at the exact path specified in the request. If something already exists at that path the server will replace whatever is there.
+* Places some provided data at the exact path specified in the request. Usually used to create a new resource.
+* If something already exists at that path the server will overwrite whatever is there.
 
 Note the distinction between `PUT` and `POST`: with `POST` the path specified in the request will handle the data and the server can put the data where it likes. A `PUT` request is basically a request to update the resource at the specified path with the data provided.
 
+EXAMPLE: Uploading a file to a server.
+
 #### DELETE
 
-An obvious one - the client has requested the server to delete the resource at the path specified.
+An obvious one - used when the client requests the server to delete a resource at the path specified.
 
 ### HTTP status codes
 Status codes accompany a server response to indicate whether the request was successful. They are made up of a three-digit number and a human-readable phrase, eg `200 OK`. There are many status codes, and you don't need to memorise them, but it is useful to know the main groups.
@@ -51,7 +71,7 @@ All is well. If a resource was requested it will be provided.
 
 #### Codes starting with 3
 
-These indicate some kind of redirection.
+These indicate some kind of redirection. The 302 status code is a common redirect code. Redirects cannot be handled using XHR requests because the browser takes care of them automatically. You will only get back what is at the redirected location.
 
 #### Codes starting with 4
 
