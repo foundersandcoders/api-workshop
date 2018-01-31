@@ -42,7 +42,7 @@ Let's create a request object in the console so we can take a closer look at it:
 6. Two things to take note of:
    * The property 'responseText' has an empty string as its value. More on this
      in a moment.
-   * Click on the arrow next to __proto__: XMLHttpRequest and take a look at all
+   * Click on the arrow next to **proto**: XMLHttpRequest and take a look at all
      those methods. You'll be using a few of them, including 'open' and 'send',
      shortly.
 
@@ -83,6 +83,16 @@ We make XMLHttpRequest so we can ask the server to send us that response.
 
 In the mean time we will only use the parse method, once you start to build your
 own server in the next weeks you will start using the `JSON.Stringify` method.
+
+But what if the `responseText` is not a JSON object, then you won't be able to
+use `JSON.parse` because the `responseText` is not a JSON object in the first
+place, in other words the method `JSON.strigify` or any other equivalent method
+wasn't used before the response is sent, but why the `JSON.parse` wasn't used?,
+it could be because we are responding with a file, or any other media/data that
+couldn't be structured in a JSON format.
+
+Usually most of API send the response as a JSON object, JSON object is very
+popular that's way in this workshop we are focusing on JSON type of response.
 
 Let's take a look at an example of a response object:
 
