@@ -9,7 +9,7 @@
 ### The pattern
 
 Request/response is a pattern that's central to making API requests. Luckily
-it's fairly simple to grasp.
+it's fairly straightforward to grasp.
 
 ![client-server-image](https://developer.mozilla.org/files/4291/client-server.png)
 
@@ -67,7 +67,7 @@ could be string, number, boolean, object, array and null.
 
 `var data = JSON.parse(xhr.responseText);`
 
-Once the responseText been parsed, you can access it like you would any other
+Once the responseText has been parsed, you can access it like you would any other
 JavaScript object. I've called my parsed object 'data'. I could then
 `console.log(data);` to get a look at my parsed object, before parsing it the
 JSON object is a string hence: before sending a JSON object we should use this
@@ -82,12 +82,12 @@ the browser "Client Side"
 We make XMLHttpRequest so we can ask the server to send us that response.
 
 In the mean time we will only use the parse method, once you start to build your
-own server in the next weeks you will start using the `JSON.Stringify` method.
+own server in the next weeks you will start using the `JSON.Stringify()` method.
 
 But what if the `responseText` is not a JSON object, then you won't be able to
-use `JSON.parse` because the `responseText` is not a JSON object in the first
-place, in other words the method `JSON.strigify` or any other equivalent method
-wasn't used before the response is sent, but why the `JSON.parse` wasn't used?,
+use `JSON.parse(responseText)` because the `responseText` is not a JSON object in the first
+place, in other words the method `JSON.strigify()` or any other equivalent method
+wasn't used before the response is sent, but why the `JSON.parse(responseText)` wasn't used?,
 it could be because we are responding with a file, or any other media/data that
 couldn't be structured in a JSON format.
 
