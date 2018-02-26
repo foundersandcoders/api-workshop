@@ -68,15 +68,16 @@ could be string, number, boolean, object, array and null.
 `var data = JSON.parse(xhr.responseText);`
 
 Once the responseText has been parsed, you can access it like you would any other
-JavaScript object. I've called my parsed object 'data'. I could then
+JavaScript object. I've called my parsed object 'data'.
+
+I could then
 `console.log(data);` to get a look at my parsed object, before parsing it the
 JSON object is a string hence: before sending a JSON object we should use this
 method in JS to transfer it to a string:
 
 `var response = JSON.Stringify(dataToSend);`
 
-In the example above the `response` and `responseText` are identical the main
-difference is that the response is in the server while the responseText is in
+In the example above the `response` and `responseText` are identical, but the response is in the server side while the responseText is in
 the browser "Client Side"
 
 We make XMLHttpRequest so we can ask the server to send us that response.
@@ -91,8 +92,8 @@ wasn't used before the response is sent, but why the `JSON.parse(responseText)` 
 it could be because we are responding with a file, or any other media/data that
 couldn't be structured in a JSON format.
 
-Usually most of API send the response as a JSON object, JSON object is very
-popular that's way in this workshop we are focusing on JSON type of response.
+Usually most of REST API send the response as a JSON object, JSON object is very
+popular that's why in this workshop we are focusing on JSON type of response.
 
 Let's take a look at an example of a response object:
 
@@ -110,4 +111,4 @@ Let's take a look at an example of a response object:
 
 When you make an api request you write code that sends a request object to a
 server. The response you get back is a mash of text and you use the
-'JSON.parse()' method to transform your response into an object you can use.
+`JSON.parse()` method to transform your response into an object you can use.
