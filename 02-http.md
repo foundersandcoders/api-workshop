@@ -19,7 +19,7 @@ There are many other communication protocols, including FTP (file transfer proto
 
 HTTPS and FTPS are secure versions of HTTP and FTP. They use SSL (Secure Sockets Layer), which encrypts the request and response. There is a close analogy between protocols and programming languages: protocols are to communications what programming languages are to computations.
 
-### HTTP methods
+## HTTP methods
 #### GET
 
 * 'gets' or grabs resources such as HTML, JavaScript, CSS, images and so on.
@@ -51,8 +51,10 @@ EXAMPLE: Uploading a file to a server.
 
 An obvious one - used when the client requests the server to delete a resource at the path specified.
 
-### HTTP status codes
+## HTTP status codes
 Status codes accompany a server response to indicate whether the request was successful. They are made up of a three-digit number and a human-readable phrase, eg `200 OK`. There are many status codes, and you don't need to memorise them, but it is useful to know the main groups.
+
+A complete list of Status Codes can be found here for reference: https://httpstatuses.com/
 
 #### Codes starting with 1
 These are known as 'informational' codes, indicating that the request was received and a provisional response has been supplied.
@@ -83,3 +85,5 @@ The famous one! The client has requested a resource that the server doesn't know
 #### Codes starting with 5
 
 This group of responses indicates an error with the server.
+
+
