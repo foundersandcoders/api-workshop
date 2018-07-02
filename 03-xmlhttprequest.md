@@ -45,7 +45,7 @@ Following is an explanation of each line of code from the block above.
 4. `document.getElementById("demo").innerHTML = xhr.responseText;` --- this is the code that will run if the request is successful. It generally does something with the response text (which is accessed with xhr.responseText)
 5. `xhr.open("GET", "xmlhttp_info.txt", true);` --- the open method is important. Here it takes 3 parameters:  
   i. *method*: The HTTP method to use (GET, POST, PUT, DELETE etc)  
-  ii. *url*: The requested URL (in this case a local file path: "xmlhttp_info.txt") - in many cases this will be the URL of the server you are querying, it is important to clarify that the word "local" here means local to the server, the server which is hosting the site,not local to the  clients machine where the browser is running. Say for example your at
+  ii. *url*: The requested URL (in this case a local file path: "xmlhttp_info.txt") - in many cases this will be the URL of the server you are querying, it is important to clarify that the word "local" here means local to the server, the server which is hosting the site, not local to the  client's machine where the browser is running. Say for example your at
   https://foundersandcoders.com you opened the console of your browser then followed steps 1-6 above, the url will be interpreted as
   https://foundersandcoders.com/xmlhttp_info.txt, because xhr is using
   current_origin as default such as `http://<current_origin>/xmlhttp_info.txt`
