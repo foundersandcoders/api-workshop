@@ -52,7 +52,13 @@ EXAMPLE: Uploading a file to a server.
 An obvious one - used when the client requests the server to delete a resource at the path specified.
 
 ## HTTP status codes
-Status codes accompany a server response to indicate whether the request was successful. They are made up of a three-digit number and a human-readable phrase, eg `200 OK`. There are many status codes, and you don't need to memorise them, but it is useful to know the main groups.
+
+Status codes accompany a server response to indicate whether the request was successful. They are made up of a three-digit number and a human-readable phrase, eg `200 OK` or `404 Not Found`. There are many status codes, and you don't need to memorise them, but it is useful to know the main groups.
+
+![](https://i.imgur.com/aN40sxJ.png)
+
+You can view information about HTTP requests including status codes in your browser's Developer Tools, usually under a "Network" tab like here:
+![](https://i.imgur.com/54IR0rH.png)
 
 A complete list of Status Codes can be found here for reference: https://httpstatuses.com/
 
