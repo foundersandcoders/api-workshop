@@ -92,7 +92,7 @@ own server in the next weeks you will start using the `JSON.stringify()` method.
 
 In this case using `JSON.parse(responseText)` will throw an error.   This might be because the address we have requested data from is responding with a file, webpage, or other media that isn't structured in a JSON format. This could also happen if there was an error with the connection and the JSON response is returned with missing chunks. 
 
-To protect against this you could wrap your JSON.parse(responseText) in a try... catch... block like so:
+To protect against this you could wrap your `JSON.parse(responseText)` in a `try... catch` block like so:
 
 ```
 try {
