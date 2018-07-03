@@ -41,7 +41,7 @@ Let's create a request object in the console so we can take a closer look at it:
 6. Two things to take note of:
    * The property 'responseText' has an empty string as its value. More on this
      in a moment.
-   * Click on the arrow next to **proto**: XMLHttpRequest and take a look at all
+   * Click on the arrow next to `__proto__`: XMLHttpRequest and take a look at all
      those methods. You'll be using a few of them, including 'open' and 'send',
      shortly.
 
@@ -107,7 +107,7 @@ try {
 You can learn more about the `try... catch` statement at [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) but don't worry too much about implementing it now.
 
 Many REST APIs send the response as a JSON object. JSON object is a very
-popular form of data whcih is why we are focusing on this response type in this workshop.
+popular form of data which is why we are focusing on this response type in this workshop.
 
 ### Let's take a look at an example of a response object:
 
