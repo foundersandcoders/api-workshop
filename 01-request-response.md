@@ -12,7 +12,7 @@ Request/response is a pattern that's central to making API requests.
 
 ![client-server-image](https://developer.mozilla.org/files/4291/client-server.png)
 
-A familiar example of request and reponse is when you open your browser, type in
+A familiar example of request and response is when you open your browser, type in
 a url and hit enter. What you're doing is opening a connection between your
 browser (the client) and some domain (the server). The server at that address
 processes your request and replies with any data (files, images etc) associated
@@ -76,7 +76,7 @@ In our case, we will parse the `xhr.responseText` we receive back from our API c
 Once the responseText has been parsed, you can access it like you would any other
 JavaScript object. I've called my parsed object 'data'. I could then `console.log(data);` to get a look at my parsed object.  
 
-It follows that before *sending* a JSON object anywhere we should also use the `JSON.stringfy()` method in JS to transform it to a string:
+It follows that before *sending* a JSON object anywhere we should also use the `JSON.stringify()` method in JS to transform it to a string:
 
 `var response = JSON.stringify(dataToSend);`
 
