@@ -18,6 +18,9 @@ Watch an example of asynchronous code on [loupe](http://latentflip.com/loupe/?co
 You'll see that the asynchronous code gets pushed off to a service worker (outside the runtime) and all the synchronous code is processed first. Then the event loop starts picking up items from the task queue and popping them onto the stack.
 
 #### What does synchronous actually mean?
+
+
+
 [From StackOverflow](http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean):
 >Oddly enough "Synchronously" means "using the same clock" so when two instructions are synchronous they use the same clock and must happen one after the other. "Asynchronous" means "not using the same clock" so the instructions are not concerned with being in step with each other. That's why it looks backwards, the term is not referring to the instructions' relationship to each other. It's referring to each instructions relationship to the clock.
 
@@ -43,3 +46,5 @@ Single-threaded asynchronous runtime
 When you send an API request, it can take a while for the response to come back. If your code is set up to be synchronous this can effectively freeze your browser while your app waits for a response.
 
 For this reason, XHR (XMLHttpRequests) are designed to be asynchronous. This means that when the runtime sees an XHR, it pushes it into the task queue so it won't block other code while waiting for the response to come back from the network.
+
+![](https://i.imgur.com/hfCUQkn.png)
