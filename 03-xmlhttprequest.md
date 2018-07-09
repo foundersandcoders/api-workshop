@@ -37,16 +37,27 @@ xhr.send();
 ### Line by line
 Following is an explanation of each line of code from the block above.
 
-1. `var xhr = new XMLHttpRequest();` --- this creates a new instance of the XHR object, which you can then use to query a server or file of your choice.  
+1. `var xhr = new XMLHttpRequest();` --- this creates a new instance of the XHR object, which you can then use to query a server or file of your choice. 
+
 2. `xhr.onreadystatechange = function() {...}` --- this method of the XHR object enables you to store a function (after the '=') which will be called automatically each time the readyState property of the xhr object changes. [Read more about `onreadystatechange` here](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange).
+
 3. `if(xhr.readyState == 4 && xhr.status == 200){...}` --- every time the readyState property changes, the function will check if these two functions are met:  
+
   i. `xhr.readyState == 4` --- the readyState property changes from 0 to 4 as the request is processed. 0 means the request is not initialised, while 4 means the request is finished and the response is ready. However, the response might be that the request hasn't found what it was meant to, which is why we also need:  
+  
   ii. `xhr.status = 200` --- this property is only valid after the send method returns successfully. It will return a 3-digit status code starting with 1, 2, 3, 4, or 5, indicating what the result of your request was. The code 200 means 'OK', while 404 is notoriously the code for 'Not found'.
+  
 4. `document.getElementById("demo").innerHTML = xhr.responseText;` --- this is the code that will run if the request is successful. It generally does something with the response text (which is accessed with xhr.responseText)
+
 5. `xhr.open("GET", "xmlhttp_info.txt", true);` --- the open method is important. Here it takes 3 parameters:  
+
   i. *method*: The HTTP method to use (GET, POST, PUT, DELETE etc)  
-  ii. *url*: The requested URL (in this case a local file path: "xmlhttp_info.txt") - in many cases this will be the URL of the server you are querying.  
+  
+  ii. *url*: The requested URL (in this case a local file path: "xmlhttp_info.txt") - in many cases this will be the URL of the server you are querying, it is important to clarify that the word "local" here means local to the server, the server which is hosting the site, not local to the  client's machine where the browser is running. Say for example your at
+  https://foundersandcoders.com you opened the console of your browser then followed steps 1-6 above, the url will be interpreted as https://foundersandcoders.com/xmlhttp_info.txt, because xhr is using current_origin as default such as `http://<current_origin>/xmlhttp_info.txt` unless specified the full URL. 
+  
   iii. *async* (optional): whether the call should be asynchronous or not. false means it waits for a response from the server before continuing execution of the code. The default value is true, which allows you to execute other scripts while waiting for the response. This is generally preferable.
+
 6. `xhr.send();` --- this method sends the request to the server. Use this after setting up the XHR with the .open() method. If you are GETting, it takes no parameter, but if you are POSTing, it may take a parameter of the string you wish to post.
 
 ### An aside about AJAX requests
