@@ -24,11 +24,9 @@ The final part of this workshop is fixing an API request which should take 15-20
 * Can you name three HTTP methods?
 * Can you think of an example of a POST request?
 
-**XHR requests:**
+**Fetch API:**
 
-* How do you create a new XHR object?
-* What does each line in the request do?
-* Why do we check on the onreadystatechange property?
+* TBC
 
 **Asynchronicity:**
 
