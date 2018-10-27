@@ -53,7 +53,7 @@ Following is an explanation of each line of code from the example above.
 
 5. `.catch(function(error) {...}` --- this code will run in case an error has occurred while processing the request, if for example the url is incorrect, we'll get an error and can display a message to the user.
 
-*Note* - Don't worry if you don't get how `.then` and `.catch` work yet, we'll go over them in greater details in later weeks, for now you need to know how to use them.
+*Note* - Don't worry if you don't get how `.then` and `.catch` work yet, we'll go over them in greater detail in later weeks, for now all you need to know is how to use them.
 
 ### An aside about AJAX requests
 
