@@ -7,51 +7,53 @@
 The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses.
 This kind of functionality was previously achieved using XMLHttpRequest. Fetch provides a better alternative that can be easily used by other technologies such as Service Workers. Fetch also provides a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.  
 
-### Making an XHR request
+### Using fetch
 
-It's important that you know that an XMLHttpRequest (XHR) is an object. You can create an instance of XHR using an object constructor as follows: `var xhr = new XMLHttpRequest()`. It has a whole lot of methods that assist you to interact with a server.
+In a very simple manner all you really do is call fetch with the URL you want, by default the Fetch API uses the GET method, so a very simple call would be like this:
 
-Here is an example of an XHR and some code to handle the response when it comes back (assuming it is successful):  
+```js
+fetch(url) // Call the fetch function passing the url of the API as a parameter
+.then(function(data) {
+    // Your code for handling the data you get from the API
+})
+.catch(function(error) {
+    // This is where you run code if the server returns any errors
+});
+```
 
-~~~
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("demo").innerHTML =
-      xhr.responseText;
-    }
-};
-xhr.open("GET", "xmlhttp_info.txt", true);
-xhr.send();
-~~~
+*This is the template for any Get request using fetch*  
 
-[You can see it in action here](http://www.w3schools.com/xml/xml_http.asp).  
+for example:
+
+```js
+fetch('https://api.github.com/users/chriscoyier/repos')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    // Here's a list of repos!
+    console.log(data);
+  })
+  .catch(function(error) {
+    console.log(error);
+  })
+```
 
 ### Line by line
-Following is an explanation of each line of code from the block above.
+Following is an explanation of each line of code from the example above.
 
-1. `var xhr = new XMLHttpRequest();` --- this creates a new instance of the XHR object, which you can then use to query a server or file of your choice.
+1. `fetch(url)` --- we are calling the Fetch API and passing it the URL we defined and since no more parameters are set this is a simple GET request.
+  - *url*: The requested URL (in this case, github's api) - in many cases this will be the URL of the server you are querying.
 
-2. `xhr.onreadystatechange = function() {...}` --- this method of the XHR object enables you to store a function (after the '=') which will be called automatically each time the readyState property of the xhr object changes. [Read more about `onreadystatechange` here](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange).
+2. `.then(function(response)` --- this is the code that runs in case the request is successful, we get a [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) object back.
 
-3. `if(xhr.readyState == 4 && xhr.status == 200){...}` --- every time the readyState property changes, the function will check if these two functions are met:  
+3. `return response.json();` --- this is just an HTTP response of course, not the actual JSON. To extract the JSON body content from the response, we use the json() method, we return the result so it can be accessed by the following function.
 
-  i. `xhr.readyState == 4` --- the readyState property changes from 0 to 4 as the request is processed. 0 means the request is not initialised, while 4 means the request is finished and the response is ready. However, the response might be that the request hasn't found what it was meant to, which is why we also need:  
+4. `.then(function(data) {...})` --- we have now passed a JSON object to this function and can now use the data.
 
-  ii. `xhr.status = 200` --- this property is only valid after the send method returns successfully. It will return a 3-digit status code starting with 1, 2, 3, 4, or 5, indicating what the result of your request was. The code 200 means 'OK', while 404 is notoriously the code for 'Not found'.
+5. `.catch(function(error) {...}` --- this code will run in case an error has occurred while processing the request, if for example the url is incorrect, we'll get an error and can display a message to the user.
 
-4. `document.getElementById("demo").innerHTML = xhr.responseText;` --- this is the code that will run if the request is successful. It generally does something with the response text (which is accessed with xhr.responseText)
-
-5. `xhr.open("GET", "xmlhttp_info.txt", true);` --- the open method is important. Here it takes 3 parameters:  
-
-  i. *method*: The HTTP method to use (GET, POST, PUT, DELETE etc)  
-
-  ii. *url*: The requested URL (in this case a local file path: "xmlhttp_info.txt") - in many cases this will be the URL of the server you are querying, it is important to clarify that the word "local" here means local to the server, the server which is hosting the site, not local to the  client's machine where the browser is running. Say for example your at
-  https://foundersandcoders.com you opened the console of your browser then followed steps 1-6 above, the url will be interpreted as https://foundersandcoders.com/xmlhttp_info.txt, because xhr is using current_origin as default such as `http://<current_origin>/xmlhttp_info.txt` unless specified the full URL.
-
-  iii. *async* (optional): whether the call should be asynchronous or not. false means it waits for a response from the server before continuing execution of the code. The default value is true, which allows you to execute other scripts while waiting for the response. This is generally preferable.
-
-6. `xhr.send();` --- this method sends the request to the server. Use this after setting up the XHR with the .open() method. If you are GETting, it takes no parameter, but if you are POSTing, it may take a parameter of the string you wish to post.
+*Note* - Don't worry if you don't get how `.then` and `.catch` work yet, we'll go over them in greater details in later weeks, for now you need to know how to use them.
 
 ### An aside about AJAX requests
 
