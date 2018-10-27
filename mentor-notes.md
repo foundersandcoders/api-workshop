@@ -26,7 +26,10 @@ The final part of this workshop is fixing an API request which should take 15-20
 
 **Fetch API:**
 
-* TBC
+* What is fetch?
+* What does a successful request return?
+* How do parse the response?
+* What is catch used for?
 
 **Asynchronicity:**
 

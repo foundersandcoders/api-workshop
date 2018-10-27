@@ -42,3 +42,4 @@ Read each section and be ready to answer questions
 - If you're at all hazy about how the Internet works, watch [this excellent explanation]( https://www.youtube.com/watch?v=7_LPdttKXPc)
 - If you're interested in how domains are translated into ip addresses, watch [this amusing discussion of DNS](https://www.youtube.com/watch?v=72snZctFFtA)
 - REST (Representational State Transfer) is a best practice standard for web interactions. [This video](https://www.youtube.com/watch?v=YCcAE2SCQ6k) gives some background about REST.
+- If you need a more comprehensive tutorial on fetch, follow [this post](https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data#toc-how-do-we-use-the-fetch-api-)
