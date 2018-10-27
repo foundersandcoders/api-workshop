@@ -47,7 +47,7 @@ Following is an explanation of each line of code from the example above.
 
 2. `.then(function(response)` --- this is the code that runs in case the request is successful, we get a [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) object back.
 
-3. `return response.json();` --- this is just an HTTP response of course, not the actual JSON. To extract the JSON body content from the response, we use the json() method, we return the result so it can be accessed by the following function.
+3. `return response.json();` --- `response` is just an HTTP response of course, not the actual JSON. To extract the JSON body content from the response, we use the json() method, we return the result so it can be accessed by the following function.
 
 4. `.then(function(data) {...})` --- we have now passed a JSON object to this function and can now use the data.
 
