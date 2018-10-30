@@ -45,6 +45,6 @@ Single-threaded asynchronous runtime
 ### API requests
 When you send an API request, it can take a while for the response to come back. If your code is set up to be synchronous this can effectively freeze your browser while your app waits for a response.
 
-For this reason, XHR (XMLHttpRequests) are designed to be asynchronous. This means that when the runtime sees an XHR, it pushes it into the task queue so it won't block other code while waiting for the response to come back from the network.
+For this reason, `fetch()` is designed to be asynchronous. This means that when the runtime sees an api request, it pushes it into the task queue so it won't block other code while waiting for the response to come back from the network.
 
-![](https://i.imgur.com/hfCUQkn.png)
+![](https://i.imgur.com/o4dY0mA.png)
