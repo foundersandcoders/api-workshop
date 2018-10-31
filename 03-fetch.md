@@ -4,9 +4,11 @@
 ## The anatomy of fetch
 
 ### What is fetch?
-The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses.
+>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses.
 
-This kind of functionality was previously achieved using XMLHttpRequest. Fetch provides a better alternative that can be easily used by other technologies such as Service Workers. Fetch also provides a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.  
+>This kind of functionality was previously achieved using XMLHttpRequest. Fetch provides a better alternative that can be easily used by other technologies such as Service Workers. Fetch also provides a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.  
+
+[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
 ### Using fetch
 
@@ -52,9 +54,13 @@ Following is an explanation of each line of code from the example above.
 
 4. `.then(function(data) {...})` --- we have now passed a JSON object to this function and can now use the data.
 
-5. `.catch(function(error) {...}` --- this code will run in case an error has occurred while processing the request, if for example the url is incorrect, we'll get an error and can display a message to the user.
+5. `.catch(function(error) {...}` --- this code will run in case an error was thrown  while processing the request, a common scenario is when the function `response.json()` fails while the request haven't returned a JSON like object, the catch would be called with  an error message of `TypeError: Failed to fetch`,
+if no error is thrown, `.catch(..`  won't be called similar to the `try catch` functionality.
 
-*Note* - Don't worry if you don't get how `.then` and `.catch` work yet, we'll go over them in greater detail in later weeks, for now all you need to know is how to use them.
+*Note* - Don't worry if you don't get how `.then` and `.catch` work yet, we'll go over them in greater detail in later weeks, also however we recommend you to check
+[Promise](https://developer.mozilla.org/en-US/docs/Web/API/Response).
+
+
 
 
 ### Fetch vs. XHR
@@ -86,7 +92,7 @@ fetch('./api/some.json')
 
 - Both code snippets achieve the same functionality, they're both asynchronous calls to an api (more on asynchrony in the next section) and they both parse the result and log it.
 - fetch is more readable and more concise, but using XHR allows you to check for failed requests in a straightforward way by checking the `status` property, while you can do so in fetch as well, a request will not fail if the status code was of an error (to understand this more, check the optional reading).
-- `response.json()` and `JSON.parse()`, the two methods are used to parse the response body. `Body.json()` is asynchronous and returns a Promise object that resolves to a JavaScript object, `JSON.parse()` is synchronous can parse a string and change the resulting returned JavaScript object.  
+- `response.json()` and `JSON.parse()`, the two methods are used to parse the response body. `Body.json()` is asynchronous and returns a Promise object that resolves to a JavaScript object, `JSON.parse()` is synchronous can parse a string, then returns a JSON object, hence since  `response.json()` is asynchronous it returns a callback as a promise object.  
 
 
 ### Optional reading: more about response and handling request errors
