@@ -56,6 +56,39 @@ Following is an explanation of each line of code from the example above.
 
 *Note* - Don't worry if you don't get how `.then` and `.catch` work yet, we'll go over them in greater detail in later weeks, for now all you need to know is how to use them.
 
+
+### Fetch vs. XHR
+Let's compare the two:
+
+__XHR - XML HTTP Request__
+```js
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var data = JSON.parse(xhr.responseText);
+      console.log(data);
+    }
+};
+xhr.open('GET', './api/some.json', true);
+xhr.send();
+```
+
+__fetch()__
+```js
+fetch('./api/some.json')
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
+    console.log(data);
+})
+```
+
+- Both code snippets achieve the same functionality, they're both asynchronous calls to an api (more on asynchrony in the next section) and they both parse the result and log it.
+- fetch is more readable and more concise, but using XHR allows you to check for failed requests in a straightforward way by checking the `status` property, while you can do so in fetch as well, a request will not fail if the status code was of an error (to understand this more, check the optional reading).
+- `response.json()` and `JSON.parse()`, the two methods are used to parse the response body. `Body.json()` is asynchronous and returns a Promise object that resolves to a JavaScript object, `JSON.parse()` is synchronous can parse a string and change the resulting returned JavaScript object.  
+
+
 ### Optional reading: more about response and handling request errors
 Let's inspect the `response` object we receive in more depth:
 
