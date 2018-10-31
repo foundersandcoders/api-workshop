@@ -55,3 +55,57 @@ Following is an explanation of each line of code from the example above.
 5. `.catch(function(error) {...}` --- this code will run in case an error has occurred while processing the request, if for example the url is incorrect, we'll get an error and can display a message to the user.
 
 *Note* - Don't worry if you don't get how `.then` and `.catch` work yet, we'll go over them in greater detail in later weeks, for now all you need to know is how to use them.
+
+### Optional reading: more about response and handling request errors
+Let's inspect the `response` object we receive in more depth:
+
+1. Open a new browser window
+2. Open the developer console (mac: `cmd+alt+i`, linux: `ctrl+shift+i`)
+3. Type/copy the following into the console:
+```js
+fetch('https://api.github.com/users/chriscoyier/repos')
+  .then(function(data) {
+    console.log(data);
+  })
+  .catch(function(error) {
+    console.log(error);
+  })
+```
+*For now you can ignore the `Promise {<pending>}`, it will be explained in later weeks*
+
+4. Check the `Response` object by clicking on the grey arrow.
+
+
+- `Response.body` is a readable stream of the response's body, if you didn't parse the response you can still read the stream, example can be found [here](https://developer.mozilla.org/en-US/docs/Web/API/Body/body#Example).
+
+- `Response.headers` is the Headers object associated with the response. HTTP headers allow the client and the server to pass additional information with the request or the response.
+
+- `Response.ok` is a read-only property of the Response that contains a Boolean stating whether the response was successful (status in the range 200-299) or not.
+fetch rejects a promise when a network error is encountered, this means a request will fail only when a network error has occurred unrelated to the status code returned.
+Try the following code in your console:
+```js
+fetch("http://httpstat.us/500")
+    .then(function() {
+        console.log("ok");
+    }).catch(function() {
+        console.log("error");
+    });
+```
+You'll get `ok` logged although you know this request will return a 500 status code.
+This can be fixed by checking the `response.ok`, this is what it'll look like now:
+```js
+fetch("http://httpstat.us/500")
+.then(function(response) {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
+    return response;
+}).then(function(response) {
+    console.log("ok");
+}).catch(function(error) {
+    console.log(error);
+});
+```
+We check if we received a successful response with `if(!reponse.ok)`, if it was not we will throw an error `Error(response.statusText)` which will be caught by our `.catch`.
+
+- `Response.status` contains the status code of the response (e.g., 200 for a success). Different results can be displayed depending on the status code returned.
