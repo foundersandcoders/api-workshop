@@ -28,7 +28,7 @@ Read each section and be ready to answer questions
 
 3. [XMLHttpRequests](https://github.com/foundersandcoders/api-workshop/blob/master/03-xmlhttprequest.md)  
 
-4. [Asynchronous code](https://github.com/foundersandcoders/api-workshop/blob/master/04-asynchonous.md)  
+4. [Asynchronous code](https://github.com/foundersandcoders/api-workshop/blob/master/04-asynchronous.md)  
 
 5. [Fix a broken API request](https://github.com/foundersandcoders/api-workshop/tree/master/api-example)  
     - You will need to clone the repository and work on the code locally
