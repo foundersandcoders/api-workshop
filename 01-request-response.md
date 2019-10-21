@@ -1,14 +1,14 @@
 ## Request and response: Learning Outcomes
 
-* Understand what a request and a response is
-* Be familiar with what a request object and response object looks like
-* Know what JSON is used for and what it looks like
+- Understand what a request and a response is
+- Be familiar with what a request object and response object looks like
+- Know what JSON is used for and what it looks like
 
 ## Request and response
 
 ### The pattern
 
-Request/response is a pattern that's central to making API requests. 
+Request/response is a pattern that's central to making API requests.
 
 ![client-server-image](https://developer.mozilla.org/files/4291/client-server.png)
 
@@ -34,14 +34,14 @@ Let's create a request object in the console so we can take a closer look at it:
 
 1. Open a new browser window
 2. Open the developer console (mac: `cmd+alt+i`, linux: `ctrl+shift+i`)
-3. Type `var xhr = new XMLHttpRequest();` in the console
+3. Type `let xhr = new XMLHttpRequest();` in the console
 4. Then type `xhr` and hit enter
 5. Click on the grey arrow next to your xhr object so you can take a look at its
    methods and properties
 6. Two things to take note of:
-   * The property 'responseText' has an empty string as its value. More on this
+   - The property 'responseText' has an empty string as its value. More on this
      in a moment.
-   * Click on the arrow next to `__proto__`: XMLHttpRequest and take a look at all
+   - Click on the arrow next to `__proto__`: XMLHttpRequest and take a look at all
      those methods. You'll be using a few of them, including 'open' and 'send',
      shortly.
 
@@ -55,7 +55,6 @@ When you make a successful request, the server sends back the response by
 assigning it as a value to the responseText property in your request. What comes
 back is great big string of text that is difficult to use.
 
-
 The `xhr.responseText` string usually is a 'stringified' version of an object we can use once we
 'parse' the string, using **JavaScript Object Notation (JSON)**.
 
@@ -64,21 +63,21 @@ that's organised and easy to access. It looks like a JavaScript object but its
 keys and values are always strings before parsing. Once parsed it's values
 could be string, number, boolean, object, array or null.
 
-JSON has two methods to convert strings to JSON objects and back again  : 
+JSON has two methods to convert strings to JSON objects and back again :
 
-* `var string = JSON.stringify(object)`
-* `var object = JSON.parse(string)`
+- `let string = JSON.stringify(object)`
+- `let object = JSON.parse(string)`
 
 In our case, we will parse the `xhr.responseText` we receive back from our API call from a string into a JSON object like so:
 
-`var data = JSON.parse(xhr.responseText);`
+`let data = JSON.parse(xhr.responseText);`
 
 Once the responseText has been parsed, you can access it like you would any other
-JavaScript object. I've called my parsed object 'data'. I could then `console.log(data);` to get a look at my parsed object.  
+JavaScript object. I've called my parsed object 'data'. I could then `console.log(data);` to get a look at my parsed object.
 
-It follows that before *sending* a JSON object anywhere we should also use the `JSON.stringify()` method in JS to transform it to a string:
+It follows that before _sending_ a JSON object anywhere we should also use the `JSON.stringify()` method in JS to transform it to a string:
 
-`var response = JSON.stringify(dataToSend);`
+`let response = JSON.stringify(dataToSend);`
 
 In the example above the `response` and `responseText` are identical, but the `response` is on the server side while the `responseText` is on
 the browser "Client Side" in your browser.
@@ -88,22 +87,23 @@ We make XMLHttpRequest so we can ask the server to send us that response.
 In the mean time we will only use the parse method, once you start to build your
 own server in the next weeks you will start using the `JSON.stringify()` method.
 
-### But what if the response object is not a JSON object? 
+### But what if the response object is not a JSON object?
 
-In this case using `JSON.parse(responseText)` will throw an error.   This might be because the address we have requested data from is responding with a file, webpage, or other media that isn't structured in a JSON format. This could also happen if there was an error with the connection and the JSON response is returned with missing chunks. 
+In this case using `JSON.parse(responseText)` will throw an error. This might be because the address we have requested data from is responding with a file, webpage, or other media that isn't structured in a JSON format. This could also happen if there was an error with the connection and the JSON response is returned with missing chunks.
 
 To protect against this you could wrap your `JSON.parse(responseText)` in a `try... catch` block like so:
 
 ```
 try {
-  var data = JSON.parse(xhr.responseText)
+  let data = JSON.parse(xhr.responseText)
 } catch (e) {
-  var data = {
+  let data = {
     error: true,
     message: e
-  }  
+  }
 }
 ```
+
 You can learn more about the `try... catch` statement at [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) but don't worry too much about implementing it now.
 
 Many REST APIs send the response as a JSON object. JSON object is a very
