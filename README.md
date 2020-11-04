@@ -22,20 +22,20 @@ Start by adding [JSONView](https://chrome.google.com/webstore/detail/jsonview/ch
 
 Read each section and be ready to answer questions  
 
-1. [Request and response pattern](https://github.com/foundersandcoders/api-workshop/blob/master/01-request-response.md)  
+1. [Request and response pattern](https://github.com/GSG-G9/api-workshop/blob/master/01-request-response.md)  
 
-2. [HTTP](https://github.com/foundersandcoders/api-workshop/blob/master/02-http.md)  
+2. [HTTP](https://github.com/GSG-G9/api-workshop/blob/master/02-http.md)  
 
-3. [XMLHttpRequests](https://github.com/foundersandcoders/api-workshop/blob/master/03-xmlhttprequest.md)  
+3. [XMLHttpRequests](https://github.com/GSG-G9/api-workshop/blob/master/03-xmlhttprequest.md)  
 
-4. [Asynchronous code](https://github.com/foundersandcoders/api-workshop/blob/master/04-asynchronous.md)  
+4. [Asynchronous code](https://github.com/GSG-G9/api-workshop/blob/master/04-asynchronous.md)  
 
-5. [Fix a broken API request](https://github.com/foundersandcoders/api-workshop/tree/master/api-example)  
+5. [Fix a broken API request](https://github.com/GSG-G9/api-workshop/blob/master/api-example)  
     - You will need to clone the repository and work on the code locally
     - If you have ssh keys for github: `git clone git@github.com:foundersandcoders/api-workshop.git`
     - Otherwise, use:`git clone https://github.com/foundersandcoders/api-workshop.git`
     - Open index.html in the browser and you will see that the API request is not working
-    - Open main.js and look for what's broken or missing in the code. If you're confused, check it line-by-line against the description of XHR in [this file](https://github.com/foundersandcoders/api-workshop/blob/master/03-xmlhttprequest.md)
+    - Open main.js and look for what's broken or missing in the code. If you're confused, check it line-by-line against the description of XHR in [this file](https://github.com/GSG-G9/api-workshop/blob/master/03-xmlhttprequest.md)
 
 
 ### Follow up and further learning
